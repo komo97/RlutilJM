@@ -1,0 +1,27 @@
+var structstats =
+[
+    [ "alive", "structstats.html#a829a8e90f4ca83de04a6948da67f2864", null ],
+    [ "attack", "structstats.html#a1fa7f3fb6c9c4e55864a9c55c3dd4555", null ],
+    [ "bg1", "structstats.html#ada1f390b08931142a7aa4a6505090c7a", null ],
+    [ "bg2", "structstats.html#a9d7c3886fd0c1837329d508bf08c3d53", null ],
+    [ "bg3", "structstats.html#a21d32d34dc1a90633f575884196bbc5f", null ],
+    [ "bg4", "structstats.html#a4a57fb348d5f2a6a17a7820e34afd6bc", null ],
+    [ "charWeapon", "structstats.html#a1f1fb3523068501a9a2636df0ce20ad6", null ],
+    [ "color1", "structstats.html#acb8d489edf2687d315e56c5e817dca7b", null ],
+    [ "color2", "structstats.html#a1150e4b26f481bc04d84f191e8525517", null ],
+    [ "color3", "structstats.html#a8e9136baa0a4af825b5d8342274f15f9", null ],
+    [ "color4", "structstats.html#aa5820776013134737ff281666c4e6040", null ],
+    [ "letter1", "structstats.html#ad7c2e3a44fb543172be72e85b6491d6c", null ],
+    [ "letter2", "structstats.html#aeaf90c6569d0f7801d77e3c70aaac81d", null ],
+    [ "letter3", "structstats.html#a1b6780b2a997cf5174ee6db2f77bfc30", null ],
+    [ "letter4", "structstats.html#a039292b5e57b680e67190787a61193c9", null ],
+    [ "life", "structstats.html#a99fe7aec631777af237bc8dac9dec499", null ],
+    [ "speed", "structstats.html#a4549b83ebc0e821f38db21f06da0b2ef", null ],
+    [ "sprite", "structstats.html#aae19f07e35a03d684906a658250338a9", null ],
+    [ "spriteSizeX", "structstats.html#a9e36cd15d3a184c684a1dc0ab797cf26", null ],
+    [ "spriteSizeY", "structstats.html#aa9e61580892c6f684c6904ddb74caa8d", null ],
+    [ "type", "structstats.html#a4fd9235ee2800f6ec2679f1eab0afe9d", null ],
+    [ "weapon", "structstats.html#a19e09f386a35a673cda2ed8d91f4680d", null ],
+    [ "x", "structstats.html#ae0bf379ff48d5c8960d90334dabce1d4", null ],
+    [ "y", "structstats.html#a959f400e89521e59aab09747306b4b24", null ]
+];
