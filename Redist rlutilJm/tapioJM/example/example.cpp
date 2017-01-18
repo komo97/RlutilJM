@@ -1,18 +1,21 @@
-﻿#include "stdafx.h"
-
+// EngineVergudo.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include "rlutil\rlutilJM.h"
 using namespace rlutilJM;
-//Declaración de entidades
+
 stats player;
 bar lifeBar;
 
 int **playerSprite;
 std::string lifeText;
+bool jumpity = false, gravity = true;
 
 void PlayerSpriteFill()
 {
 	int i, j;
 	if (playerSprite == NULL) {
-		playerSprite = new int*[10];
+		playerSprite = new int*[140];
 		for (i = 0; i < 10; i++)
 		{
 			playerSprite[i] = new int[10];
@@ -195,23 +198,37 @@ void Draw()
 {
 	ClearBuffer();
 
-	FillBar(&lifeBar,NULL, player.life);
+	FillBar(&lifeBar, NULL, player.life);
 	DrawSprite(&player);
 	lifeText = ("Life: " + std::to_string(player.life));
 	TextWrapper(lifeText.c_str(), GREEN, BLACK, 10, 13);
 	PrintBuffer();
+	if (player.y < 30 && jumpity) {
+		gravity = true;
+		jumpity = false;
+	}
+	else if((!jumpity && player.y >= 70)){
+		gravity = false;
+	}
+	if (gravity && !jumpity)
+	{
+		SpriteMoveY(&player, DIRDOWN);
+	}
+	if (jumpity) SpriteMoveY(&player, DIRUP);
+	msleep(8);
 
 }
 
 int main()
 {
+
 	WindowSize(100, 100);
-	PlayerSpriteFill2();
+	PlayerSpriteFill();
 	SetStats(&player, 10, 10, 100, 1, 1, CHARACTER);
 	InitializeBar(&lifeBar, 10, 6, player.life, 25, 5, GREEN, YELLOW, RED, BLUE);
-	player.sprite =InitializeSpriteArray(&player, 10, 10);
+	player.sprite = InitializeSpriteArray(&player, 10, 10);
 	/*player.sprite = InitializeSpriteArray(&player, 32, 32);*/
-	player.sprite =SpriteParams(&player, LIGHTMAGENTA, BLUE, RED, GREEN, LIGHTMAGENTA, 0, 0, 0, (playerSprite), 0);
+	player.sprite = SpriteParams(&player, LIGHTMAGENTA, BLUE, RED, GREEN, LIGHTMAGENTA, 0, 0, 0, (playerSprite), 0);
 	CharSpriteParams(&player, '*', '*', '*', '*', '*');
 	while (1)
 	{
@@ -220,11 +237,7 @@ int main()
 		if (kbhit())
 		{
 			char hit = getch();
-			if (hit == 'w')
-			{
-				SpriteMoveY(&player, DIRUP);
-			}
-			else if (hit == 'a')
+			if (hit == 'a')
 			{
 				SpriteMoveX(&player, DIRLEFT);
 			}
@@ -232,11 +245,11 @@ int main()
 			{
 				SpriteMoveX(&player, DIRRIGHT);
 			}
-			else if (hit == 's')
+			else if (hit == ' ' || jumpity)
 			{
-				SpriteMoveY(&player, DIRDOWN);
+				jumpity = true;
 			}
-			else if (hit == ' ')
+			else if (hit == '6')
 			{
 				player.life--;
 			}
