@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
 
+using namespace rlutilJM;
 //Declaración de entidades
 stats player;
 bar lifeBar;
@@ -208,7 +209,7 @@ int main()
 	PlayerSpriteFill2();
 	SetStats(&player, 10, 10, 100, 1, 1, CHARACTER);
 	InitializeBar(&lifeBar, 10, 6, player.life, 25, 5, GREEN, YELLOW, RED, BLUE);
-	player.sprite =InitializeSpriteArray(&player, 32, 32);
+	player.sprite =InitializeSpriteArray(&player, 10, 10);
 	/*player.sprite = InitializeSpriteArray(&player, 32, 32);*/
 	player.sprite =SpriteParams(&player, LIGHTMAGENTA, BLUE, RED, GREEN, LIGHTMAGENTA, 0, 0, 0, (playerSprite), 0);
 	CharSpriteParams(&player, '*', '*', '*', '*', '*');

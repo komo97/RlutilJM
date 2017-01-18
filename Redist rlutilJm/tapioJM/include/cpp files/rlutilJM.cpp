@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+﻿#include "rlutilJM.h"
 
 
 #pragma region GlobalVariables
@@ -7,13 +7,13 @@
 	int SCREEN_SIZE_HEIGHT;
 
 	//Fake screen buffer. Dejar como variable global.
-	tile** screenBuffer;
-	tile** lastScreenBuffer;
+	rlutilJM::tile** screenBuffer;
+	rlutilJM::tile** lastScreenBuffer;
 	sf::Music music;
 #pragma endregion
 
 
-void WindowSize(int _x, int _y)
+void rlutilJM::WindowSize(int _x, int _y)
 {
 	cls();
 	SCREEN_SIZE_HEIGHT = _y;
@@ -37,7 +37,7 @@ void WindowSize(int _x, int _y)
 	hidecursor();
 }
 
-void KeepScreenSize()
+void rlutilJM::KeepScreenSize()
 {
 
 	{
@@ -56,7 +56,7 @@ void KeepScreenSize()
 	hidecursor();
 }
 	
-void PlayMusic(char * _musicPath, BOOL _loop, float _vol)
+void rlutilJM::PlayMusic(char * _musicPath, BOOL _loop, float _vol)
 {
 	if (!music.openFromFile(_musicPath))
 		return;
@@ -66,7 +66,7 @@ void PlayMusic(char * _musicPath, BOOL _loop, float _vol)
 	music.play();
 }
 
-void FontSize()
+void rlutilJM::FontSize()
 {
 	{
 		HANDLE consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -82,7 +82,7 @@ void FontSize()
 	}
 }
 
-void FillBar(bar * _entity, int _fullParam, int _currParam)
+void rlutilJM::FillBar(bar * _entity, int _fullParam, int _currParam)
 {
 	{
 		int i, j;
@@ -122,7 +122,7 @@ void FillBar(bar * _entity, int _fullParam, int _currParam)
 	}
 }
 
-void SetStats(stats * _entity, int _x, int _y, int _life, int _attack, int _speed, int _characterType)
+void rlutilJM::SetStats(stats * _entity, int _x, int _y, int _life, int _attack, int _speed, int _characterType)
 {
 	{
 		_entity->x = _x;
@@ -138,7 +138,7 @@ void SetStats(stats * _entity, int _x, int _y, int _life, int _attack, int _spee
 	}
 }
 
-void UpdateStats(stats * _entity, int _x, int _y, int _life, int _attack, int _speed)
+void rlutilJM::UpdateStats(stats * _entity, int _x, int _y, int _life, int _attack, int _speed)
 {
 	{
 		_entity->x += _x;
@@ -153,7 +153,7 @@ void UpdateStats(stats * _entity, int _x, int _y, int _life, int _attack, int _s
 	}
 }
 
-int ** SpriteParams(stats * _entity, int _color1, int _color2, int _color3, int _color4, int _bg1, int _bg2, int _bg3, int _bg4, int ** _sprite, int _weapon)
+int ** rlutilJM::SpriteParams(stats * _entity, int _color1, int _color2, int _color3, int _color4, int _bg1, int _bg2, int _bg3, int _bg4, int ** _sprite, int _weapon)
 {
 	{
 		_entity->color1 = _color1;
@@ -179,7 +179,7 @@ int ** SpriteParams(stats * _entity, int _color1, int _color2, int _color3, int 
 	}
 }
 
-void CharSpriteParams(stats * _entity, char _letter1, char _letter2, char _letter3, char _letter4, char _charWeapon)
+void rlutilJM::CharSpriteParams(stats * _entity, char _letter1, char _letter2, char _letter3, char _letter4, char _charWeapon)
 {
 	{
 		_entity->letter1 = _letter1;
@@ -190,7 +190,7 @@ void CharSpriteParams(stats * _entity, char _letter1, char _letter2, char _lette
 	}
 }
 
-void DrawSprite(stats * _entity)
+void rlutilJM::DrawSprite(stats * _entity)
 {
 	if(_entity->type == CHARACTER)
 	{
@@ -266,7 +266,7 @@ void DrawSprite(stats * _entity)
 	}
 }
 
-int ** InitializeSpriteArray(stats * _entity, int _spriteSizeX, int _spriteSizeY)
+int ** rlutilJM::InitializeSpriteArray(stats * _entity, int _spriteSizeX, int _spriteSizeY)
 {
 	{
 		_entity->spriteSizeX = _spriteSizeX;
@@ -281,7 +281,7 @@ int ** InitializeSpriteArray(stats * _entity, int _spriteSizeX, int _spriteSizeY
 	}
 }
 
-void InitializeBar(bar * _entity, int _x, int _y, int _maxValue, int _spriteSizeX, int _spriteSizeY, int _color1, int _color2, int _color3, int _constraint)
+void rlutilJM::InitializeBar(bar * _entity, int _x, int _y, int _maxValue, int _spriteSizeX, int _spriteSizeY, int _color1, int _color2, int _color3, int _constraint)
 {
 	_entity->x = _x;
 	_entity->y = _y;
@@ -295,7 +295,7 @@ void InitializeBar(bar * _entity, int _x, int _y, int _maxValue, int _spriteSize
 	_entity->constraint = _constraint;
 }
 
-void FreeSpriteArray(stats * _entity)
+void rlutilJM::FreeSpriteArray(stats * _entity)
 {
 	{
 		int i;
@@ -311,21 +311,21 @@ void FreeSpriteArray(stats * _entity)
 //{
 //}
 
-void SpriteMoveX(stats * _entity, int _movDirX)
+void rlutilJM::SpriteMoveX(stats * _entity, int _movDirX)
 {
 	{
 		_entity->x += (_entity->speed*_movDirX);
 	}
 }
 
-void SpriteMoveY(stats * _entity, int _movDirY)
+void rlutilJM::SpriteMoveY(stats * _entity, int _movDirY)
 {
 	{
 		_entity->y -= (_entity->speed*_movDirY);
 	}
 }
 
-void AddToBuffer(int _colorVal, int _backVal, char _letVal, int posx, int posy, int ocup)
+void rlutilJM::AddToBuffer(int _colorVal, int _backVal, char _letVal, int posx, int posy, int ocup)
 {
 	screenBuffer[posy][posx].backVal = _backVal;
 	screenBuffer[posy][posx].colorVal = _colorVal;
@@ -333,7 +333,7 @@ void AddToBuffer(int _colorVal, int _backVal, char _letVal, int posx, int posy, 
 	screenBuffer[posy][posx].ocupant = ocup;
 }
 
-void ClearBuffer()
+void rlutilJM::ClearBuffer()
 {
 	rlutil::resetColor();
 	int i, j;
@@ -348,7 +348,7 @@ void ClearBuffer()
 	}
 }
 
-void PrintBuffer()
+void rlutilJM::PrintBuffer()
 {
 	int i, j;
 	for (i = 0; i < SCREEN_SIZE_HEIGHT; i++)
@@ -377,7 +377,7 @@ void PrintBuffer()
 	}
 }
 
-void CreateFakeScreenBuffer()
+void rlutilJM::CreateFakeScreenBuffer()
 {
 	int i, j;
 	screenBuffer = new tile*[SCREEN_SIZE_HEIGHT];
@@ -398,7 +398,7 @@ void CreateFakeScreenBuffer()
 	}
 }
 
-void TextWrapper(const char * text, int color, int background, int posx, int posy)
+void rlutilJM::TextWrapper(const char * text, int color, int background, int posx, int posy)
 {
 	std::string a(text);
 	for (int i = 0; i < a.size(); i++)
@@ -407,7 +407,7 @@ void TextWrapper(const char * text, int color, int background, int posx, int pos
 	}
 }
 
-int ** FillEmptySprite(stats * _entity, int ** _sprite)
+int ** rlutilJM::FillEmptySprite(stats * _entity, int ** _sprite)
 {
 	int i, j;
 	if (_sprite == NULL) {
@@ -427,7 +427,8 @@ int ** FillEmptySprite(stats * _entity, int ** _sprite)
 	return _sprite;
 }
 
-void AddPixel(int y, int x, int content, int *** _sprite)
+void rlutilJM::AddPixel(int y, int x, int content, int *** _sprite)
 {
 	*_sprite[y][x] = content;
 }
+
