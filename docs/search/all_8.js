@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hidecursor',['hidecursor',['../rlutil_8h.html#abdd163103c31d14e57703e8a4f98a48c',1,'rlutil.h']]]
+  ['maxvalue',['maxValue',['../structbar.html#af1927757b0961d00719b8527e3aaba6f',1,'bar']]]
 ];

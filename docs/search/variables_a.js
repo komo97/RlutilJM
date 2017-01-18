@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../structrlutil_j_m_1_1stats.html#aeb76c03812e124d2c91ee0b4b39cc9ea',1,'rlutilJM::stats::x()'],['../structrlutil_j_m_1_1bar.html#aeee7ca4641ab3edb905f61f1ee7a1b97',1,'rlutilJM::bar::x()']]]
+  ['x',['x',['../structstats.html#ae0bf379ff48d5c8960d90334dabce1d4',1,'stats::x()'],['../structbar.html#a59f82c1e3219d7581cd6dff4396ed6d6',1,'bar::x()']]]
 ];

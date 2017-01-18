@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['speed',['speed',['../structrlutil_j_m_1_1stats.html#a8d50f05068be130b2ef27f09b9c497d2',1,'rlutilJM::stats']]],
-  ['sprite',['sprite',['../structrlutil_j_m_1_1stats.html#a89fe3c08612d2f330efa4f2aced0c59c',1,'rlutilJM::stats']]],
-  ['spritesizex',['spriteSizeX',['../structrlutil_j_m_1_1stats.html#aa3616e802c843d562b82d167f95dfdc7',1,'rlutilJM::stats::spriteSizeX()'],['../structrlutil_j_m_1_1bar.html#a4832f38a20af05d6c7475a171615a17e',1,'rlutilJM::bar::spriteSizeX()']]],
-  ['spritesizey',['spriteSizeY',['../structrlutil_j_m_1_1stats.html#a6e00af8b6c49c7380eca6d0e5d62614d',1,'rlutilJM::stats::spriteSizeY()'],['../structrlutil_j_m_1_1bar.html#af35be59c34fafb151cba1420235b25a1',1,'rlutilJM::bar::spriteSizeY()']]]
+  ['speed',['speed',['../structstats.html#a4549b83ebc0e821f38db21f06da0b2ef',1,'stats']]],
+  ['sprite',['sprite',['../structstats.html#aae19f07e35a03d684906a658250338a9',1,'stats']]],
+  ['spritesizex',['spriteSizeX',['../structstats.html#a9e36cd15d3a184c684a1dc0ab797cf26',1,'stats::spriteSizeX()'],['../structbar.html#a5e2ee8cdb9a55c565c0edcfdc559bed5',1,'bar::spriteSizeX()']]],
+  ['spritesizey',['spriteSizeY',['../structstats.html#aa9e61580892c6f684c6904ddb74caa8d',1,'stats::spriteSizeY()'],['../structbar.html#ad60128769c132e1915d22b8dc58b9288',1,'bar::spriteSizeY()']]]
 ];

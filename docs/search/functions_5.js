@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hidecursor',['hidecursor',['../rlutil_8h.html#abdd163103c31d14e57703e8a4f98a48c',1,'rlutil.h']]]
+  ['keepscreensize',['KeepScreenSize',['../namespacerlutil_j_m.html#ab5430e377196604f542b29210df7afdc',1,'rlutilJM']]]
 ];

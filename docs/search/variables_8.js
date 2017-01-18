@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type',['type',['../structrlutil_j_m_1_1stats.html#a4ad32868c2f156f41dd144e530860ce4',1,'rlutilJM::stats']]]
+  ['type',['type',['../structstats.html#a4fd9235ee2800f6ec2679f1eab0afe9d',1,'stats']]]
 ];

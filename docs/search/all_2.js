@@ -1,21 +1,14 @@
 var searchData=
 [
-  ['background',['BACKGROUND',['../rlutil_j_m_8h.html#a850b2f07a67b73890889e63fb8a49fda',1,'rlutilJM.h']]],
-  ['background1',['BACKGROUND1',['../rlutil_j_m_8h.html#a7461aaeba01a77bbdba859c0be2845cf',1,'rlutilJM.h']]],
-  ['background2',['BACKGROUND2',['../rlutil_j_m_8h.html#a73578e1eeb987b6d032008688b494978',1,'rlutilJM.h']]],
-  ['background3',['BACKGROUND3',['../rlutil_j_m_8h.html#ad033bf4897adda6d78d7a32a29b4c2bf',1,'rlutilJM.h']]],
-  ['background4',['BACKGROUND4',['../rlutil_j_m_8h.html#a6421a06eea6036a4f200199365b27aa6',1,'rlutilJM.h']]],
-  ['backval',['backVal',['../structrlutil_j_m_1_1tile.html#a4af32f393944360e70b8f5b6bc781b32',1,'rlutilJM::tile']]],
-  ['bar',['bar',['../structrlutil_j_m_1_1bar.html',1,'rlutilJM::bar'],['../namespacerlutil_j_m.html#a106dba9aa510bf664ddce91344581a16',1,'rlutilJM::bar()'],['../rlutil_j_m_8h.html#a5bf228ab7079ac2b45e0affe75b5a40d',1,'BAR():&#160;rlutilJM.h']]],
-  ['bar1',['BAR1',['../rlutil_j_m_8h.html#a4ceeca7cc9bab8b697f8a49f79037010',1,'rlutilJM.h']]],
-  ['bar2',['BAR2',['../rlutil_j_m_8h.html#a44fa2ca32ff22e5eb7fa28ef39e50780',1,'rlutilJM.h']]],
-  ['bar3',['BAR3',['../rlutil_j_m_8h.html#a7f201c103377c8f3c84f10576e63e7af',1,'rlutilJM.h']]],
-  ['barconstraints',['BARCONSTRAINTS',['../rlutil_j_m_8h.html#a2c1cf96b7dcda6f6efa53f1ab6d0923d',1,'rlutilJM.h']]],
-  ['bg1',['bg1',['../structrlutil_j_m_1_1stats.html#a467c20d1aae0985982629c9e279b751f',1,'rlutilJM::stats']]],
-  ['bg2',['bg2',['../structrlutil_j_m_1_1stats.html#a87bff8f5078e8c46fcd3b6023cedfcb3',1,'rlutilJM::stats']]],
-  ['bg3',['bg3',['../structrlutil_j_m_1_1stats.html#ac87d374a32246576186706ea7078413c',1,'rlutilJM::stats']]],
-  ['bg4',['bg4',['../structrlutil_j_m_1_1stats.html#a4de13f78dd619a98c0bda3ff621adc31',1,'rlutilJM::stats']]],
-  ['black',['BLACK',['../rlutil_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf77fb67151d0c18d397069ad8c271ba3',1,'rlutil.h']]],
-  ['blue',['BLUE',['../rlutil_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba35d6719cb4d7577c031b3d79057a1b79',1,'rlutil.h']]],
-  ['brown',['BROWN',['../rlutil_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1fa14482e7e4dc1332ab8c9d995fe570',1,'rlutil.h']]]
+  ['charspriteparams',['CharSpriteParams',['../namespacerlutil_j_m.html#a6de2c068e46f4f0abe78ff4b62d05d70',1,'rlutilJM']]],
+  ['charweapon',['charWeapon',['../structstats.html#a1f1fb3523068501a9a2636df0ce20ad6',1,'stats']]],
+  ['clearbuffer',['ClearBuffer',['../namespacerlutil_j_m.html#a1ccd140efeab1eecc515eb885cb3d9c5',1,'rlutilJM']]],
+  ['color1',['color1',['../structstats.html#acb8d489edf2687d315e56c5e817dca7b',1,'stats::color1()'],['../structbar.html#a221fbfff9697a50cd5f4b4564ba92baa',1,'bar::color1()']]],
+  ['color2',['color2',['../structstats.html#a1150e4b26f481bc04d84f191e8525517',1,'stats::color2()'],['../structbar.html#ac7e30f0e08ba0bc78b974b5e9c53fa75',1,'bar::color2()']]],
+  ['color3',['color3',['../structstats.html#a8e9136baa0a4af825b5d8342274f15f9',1,'stats::color3()'],['../structbar.html#a8027b96c760cf7f00a1e3897dae84013',1,'bar::color3()']]],
+  ['color4',['color4',['../structstats.html#aa5820776013134737ff281666c4e6040',1,'stats']]],
+  ['colorval',['colorVal',['../structtile.html#a7916329564a02bc8d89ec4ee01c28009',1,'tile']]],
+  ['constraint',['constraint',['../structbar.html#a3694770ab0f6cd8bf27fbdc4a03804af',1,'bar']]],
+  ['createfakescreenbuffer',['CreateFakeScreenBuffer',['../namespacerlutil_j_m.html#ab6b44830f792b43303c2b94486742838',1,'rlutilJM']]],
+  ['currvalue',['currValue',['../structbar.html#a9ef51fd86e5578657d076a0731f5ffa5',1,'bar']]]
 ];

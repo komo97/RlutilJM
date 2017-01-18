@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['locate',['locate',['../rlutil_8h.html#a7483c4e70225934f8e426b0a4fa0ceec',1,'rlutil.h']]]
+  ['textwrapper',['TextWrapper',['../namespacerlutil_j_m.html#a393d69e66d1cb7507e78acd83af608c8',1,'rlutilJM']]]
 ];

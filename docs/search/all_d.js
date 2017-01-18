@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['nb_5fgetch',['nb_getch',['../rlutil_8h.html#a6392158581c94febcb54ea96fe9c05fe',1,'rlutil.h']]],
-  ['nomove',['NOMOVE',['../rlutil_j_m_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f',1,'rlutilJM.h']]]
+  ['textwrapper',['TextWrapper',['../namespacerlutil_j_m.html#a393d69e66d1cb7507e78acd83af608c8',1,'rlutilJM']]],
+  ['tile',['tile',['../structtile.html',1,'']]],
+  ['type',['type',['../structstats.html#a4fd9235ee2800f6ec2679f1eab0afe9d',1,'stats']]]
 ];

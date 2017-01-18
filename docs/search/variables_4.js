@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxvalue',['maxValue',['../structrlutil_j_m_1_1bar.html#a142ed1231990bad7b3baf6822a6db86b',1,'rlutilJM::bar']]]
+  ['maxvalue',['maxValue',['../structbar.html#af1927757b0961d00719b8527e3aaba6f',1,'bar']]]
 ];

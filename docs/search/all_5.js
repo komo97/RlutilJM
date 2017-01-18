@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['empty',['EMPTY',['../rlutil_j_m_8h.html#a2b7cf2a3641be7b89138615764d60ba3',1,'rlutilJM.h']]]
+  ['initializebar',['InitializeBar',['../namespacerlutil_j_m.html#a5b41ac5c4c643b6bc047a4d8de8ebac1',1,'rlutilJM']]],
+  ['initializespritearray',['InitializeSpriteArray',['../namespacerlutil_j_m.html#a024026db7c1a88f341d0ecbb159f18f2',1,'rlutilJM']]]
 ];

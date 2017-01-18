@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ocupant',['ocupant',['../structrlutil_j_m_1_1tile.html#a22407b71d51b63708df36cbb8c244965',1,'rlutilJM::tile']]]
+  ['updatestats',['UpdateStats',['../namespacerlutil_j_m.html#ad6a2632b8db2791e4a2ae3a12ad1baef',1,'rlutilJM']]]
 ];
