@@ -162,7 +162,7 @@ public:
 	///</summary>
 	///<param name="y">The sprite's space in Y.</param><param name="x">The sprite's space in X.</param>
 	///<param name="content">The pixel's content.</param><param name="_sprite">The array to work with by ref.</param>
-	static void AddPixel(int y, int x, int content, int*** _sprite);
+	static void AddPixel(int y, int x, int content, int**& _sprite);
 
 	///<summary>
 	///Returns an initialized bidimentional Int array. Simple method for saving some lines.
