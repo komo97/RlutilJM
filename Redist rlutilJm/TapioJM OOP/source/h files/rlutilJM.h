@@ -86,6 +86,7 @@ namespace rlutilJM {
 #define BAR 0x0003
 #define TEXT 0x0004 
 #define WALL 0x0005
+#define ENEMY 0x0006
 };
 
 using namespace rlutilJM;
@@ -172,12 +173,18 @@ public:
 	inline static int getScreenWidth() { return SCREEN_SIZE_WIDTH; };
 	inline static int getScreenHeight() { return SCREEN_SIZE_HEIGHT; };
 
+	///<summary>
+	///Detects collisions using a mask. Returns true only if an Enemy has overlapped with a Character.
+	///</summary>
+	inline static bool getEventCollisionStatus() { return collision; };
 private:
 	static int SCREEN_SIZE_WIDTH;
 	static int SCREEN_SIZE_HEIGHT;
 	static Tile** screenBuffer;
 	static Tile** lastScreenBuffer;
 	static sf::Music music;
+	static bool collision;
+	inline static void setEventCollisionStatus(bool _status) { collision = _status; };
 };
 
 #endif // !_RLUTILSJM_H_
