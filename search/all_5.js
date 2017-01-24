@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initializebar',['InitializeBar',['../namespacerlutil_j_m.html#a5b41ac5c4c643b6bc047a4d8de8ebac1',1,'rlutilJM']]],
-  ['initializespritearray',['InitializeSpriteArray',['../namespacerlutil_j_m.html#a024026db7c1a88f341d0ecbb159f18f2',1,'rlutilJM']]]
+  ['fontsize',['FontSize',['../classrl_util_j_m.html#a0d0023c7152fdaba082f631f7421fd7c',1,'rlUtilJM']]],
+  ['freesprite',['freeSprite',['../class_entity.html#a6adec3bcec396133896aaecdb13f87e0',1,'Entity']]]
 ];

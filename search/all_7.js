@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['letter1',['letter1',['../structstats.html#ad7c2e3a44fb543172be72e85b6491d6c',1,'stats']]],
-  ['letter2',['letter2',['../structstats.html#aeaf90c6569d0f7801d77e3c70aaac81d',1,'stats']]],
-  ['letter3',['letter3',['../structstats.html#a1b6780b2a997cf5174ee6db2f77bfc30',1,'stats']]],
-  ['letter4',['letter4',['../structstats.html#a039292b5e57b680e67190787a61193c9',1,'stats']]],
-  ['letval',['letVal',['../structtile.html#a86e4eb434dfc51886423c792ea86a4fc',1,'tile']]],
-  ['life',['life',['../structstats.html#a99fe7aec631777af237bc8dac9dec499',1,'stats']]]
+  ['initsprite',['InitSprite',['../class_bar.html#a88e2116cda184937be533c2e8377ca28',1,'Bar::InitSprite()'],['../class_entity.html#a0d4b557baf534b8660d71e9c6d0aa58d',1,'Entity::InitSprite()']]],
+  ['initspritearray',['InitSpriteArray',['../classrl_util_j_m.html#a8648ec188445988b19b7230b28bc75f2',1,'rlUtilJM']]],
+  ['isalive',['isAlive',['../class_entity.html#ab0986ba7a1b24f022b5623781050c0f1',1,'Entity']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textwrapper',['TextWrapper',['../namespacerlutil_j_m.html#a393d69e66d1cb7507e78acd83af608c8',1,'rlutilJM']]]
+  ['keepscreensize',['KeepScreenSize',['../classrl_util_j_m.html#adacc6ef6950e39a8cbf648467fe13a5d',1,'rlUtilJM']]]
 ];

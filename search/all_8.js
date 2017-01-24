@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxvalue',['maxValue',['../structbar.html#af1927757b0961d00719b8527e3aaba6f',1,'bar']]]
+  ['keepscreensize',['KeepScreenSize',['../classrl_util_j_m.html#adacc6ef6950e39a8cbf648467fe13a5d',1,'rlUtilJM']]]
 ];

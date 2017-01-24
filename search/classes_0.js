@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bar',['bar',['../structbar.html',1,'']]]
+  ['bar',['Bar',['../class_bar.html',1,'']]]
 ];

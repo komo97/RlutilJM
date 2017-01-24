@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['setstats',['SetStats',['../namespacerlutil_j_m.html#ad57e03a27ea0f39a90d68208034fa832',1,'rlutilJM']]],
-  ['spritemovex',['SpriteMoveX',['../namespacerlutil_j_m.html#ae6ebfaf403a14168cc0689c82af11442',1,'rlutilJM']]],
-  ['spritemovey',['SpriteMoveY',['../namespacerlutil_j_m.html#a0423fc0928410d6ebdcf9170f716d76d',1,'rlutilJM']]],
-  ['spriteparams',['SpriteParams',['../namespacerlutil_j_m.html#a6a4e7b120e5d4acdc66f401bf11041e5',1,'rlutilJM']]]
+  ['initsprite',['InitSprite',['../class_bar.html#a88e2116cda184937be533c2e8377ca28',1,'Bar::InitSprite()'],['../class_entity.html#a0d4b557baf534b8660d71e9c6d0aa58d',1,'Entity::InitSprite()']]],
+  ['initspritearray',['InitSpriteArray',['../classrl_util_j_m.html#a8648ec188445988b19b7230b28bc75f2',1,'rlUtilJM']]],
+  ['isalive',['isAlive',['../class_entity.html#ab0986ba7a1b24f022b5623781050c0f1',1,'Entity']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stats',['stats',['../structstats.html',1,'']]]
+  ['entity',['Entity',['../class_entity.html',1,'']]]
 ];

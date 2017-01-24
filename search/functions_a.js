@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['windowsize',['WindowSize',['../namespacerlutil_j_m.html#a224f577edf06c5edd3bbfe7176873c5b',1,'rlutilJM']]]
+  ['setattack',['setAttack',['../class_entity.html#ab336d616c6fe1c1fc46f4ee5ac9676bb',1,'Entity']]],
+  ['setbackground',['setBackground',['../class_tile.html#a39846a20e36d7f2aea84b890402f60f6',1,'Tile']]],
+  ['setbackgrounds',['setBackgrounds',['../class_entity.html#a7fce304719e165f609fa99c0cbf949c4',1,'Entity']]],
+  ['setchar',['setChar',['../class_tile.html#aa268d7729fb51215ddaa09f7ebcec733',1,'Tile']]],
+  ['setcolor',['setColor',['../class_tile.html#a044a5d8cf07dfec9ee359cf88f117301',1,'Tile']]],
+  ['setcolors',['setColors',['../class_bar.html#ac8ae1ae55bd215fc71e5d8fb4c356f48',1,'Bar::setColors()'],['../class_entity.html#aa2dc558f48f06b6fc23cc3e3a8eb6c85',1,'Entity::setColors()']]],
+  ['setconstraint',['setConstraint',['../class_bar.html#af73a2ace0676d7a265d304b34f5d7277',1,'Bar']]],
+  ['setletters',['setLetters',['../class_entity.html#afd35509abb23e42c899bd0dfaf08ec64',1,'Entity']]],
+  ['setmax',['setMax',['../class_bar.html#aae6cad23ffc19bc7abd3c738b3fd0c80',1,'Bar']]],
+  ['setocupant',['setOcupant',['../class_tile.html#a912539b469ce6a4f6e0b6387972e1ce6',1,'Tile']]],
+  ['setspeed',['setSpeed',['../class_entity.html#adc48ea3a922e2705958bcb1f3066011b',1,'Entity']]],
+  ['setsprite',['setSprite',['../class_entity.html#ad9f1608d4ada65b22df63b8303123dc1',1,'Entity']]],
+  ['setvalue',['setValue',['../class_bar.html#a7abf317bcdd5525643335a58f18fbd29',1,'Bar']]],
+  ['setweaponcolor',['setWeaponColor',['../class_entity.html#ae0f95ef62ea64a669e6a9fd07de2e5e3',1,'Entity']]],
+  ['setweaponletter',['setWeaponLetter',['../class_entity.html#a3743b667840338d0de82b82c20609040',1,'Entity']]],
+  ['setx',['setX',['../class_bar.html#ab7260583247a1c27c84b9acb39bbab16',1,'Bar::setX()'],['../class_entity.html#a20ce7d56d771545d531ee9f3348264e2',1,'Entity::setX()']]],
+  ['sety',['setY',['../class_bar.html#a905e510fb2565ec21740c19efb37696a',1,'Bar::setY()'],['../class_entity.html#ac1f18e8932a75fffdfd1453d59a05a5a',1,'Entity::setY()']]]
 ];
