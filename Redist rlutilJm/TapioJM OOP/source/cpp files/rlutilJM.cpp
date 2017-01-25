@@ -5,6 +5,7 @@ int rlUtilJM::SCREEN_SIZE_HEIGHT;
 Tile** rlUtilJM::screenBuffer;
 Tile** rlUtilJM::lastScreenBuffer;
 sf::Music rlUtilJM::music;
+bool rlUtilJM::collision;
 
 void rlUtilJM::KeepScreenSize()
 {
@@ -47,12 +48,27 @@ void rlUtilJM::WindowSize(int _x, int _y)
 	hidecursor();
 }
 
-void rlUtilJM::PlayMusic(char * _musicPath, BOOL _loop, float _vol)
+void rlUtilJM::PlayMusicBackground(char * _musicPath, BOOL _loop, float _vol, BOOL _stopCurrentAudio)
 {
 	if (!music.openFromFile(_musicPath))
 		return;
 	if (_loop == TRUE)
 		music.setLoop(true);
+	if (_stopCurrentAudio == TRUE)
+	{
+		music.stop();
+	}
+	if (music.getStatus() != sf::Music::Playing)
+	{
+		music.setVolume(_vol);
+		music.play();
+	}
+}
+
+void rlUtilJM::PlaySoundEffect(char * _musicPath, float _vol)
+{
+	if (!music.openFromFile(_musicPath))
+		return;
 	music.setVolume(_vol);
 	music.play();
 }
@@ -97,10 +113,13 @@ void rlUtilJM::ClearBuffer()
 
 void rlUtilJM::PrintBuffer()
 {
+	setEventCollisionStatus(false);
 	for (int i = 0; i < SCREEN_SIZE_HEIGHT; i++)
 	{
 		for (int j = 0; j < SCREEN_SIZE_WIDTH; j++)
 		{
+			if (screenBuffer[i][j].getOcupant() == ENEMY && lastScreenBuffer[i][j].getOcupant() == CHARACTER)
+				setEventCollisionStatus(true);
 			if (screenBuffer[i][j].getBackground() != lastScreenBuffer[i][j].getBackground() ||
 				screenBuffer[i][j].getColor() != lastScreenBuffer[i][j].getColor() ||
 				screenBuffer[i][j].getLetter() != lastScreenBuffer[i][j].getLetter())
@@ -119,6 +138,7 @@ void rlUtilJM::PrintBuffer()
 			lastScreenBuffer[i][j].setBackground(screenBuffer[i][j].getBackground());
 			lastScreenBuffer[i][j].setColor(screenBuffer[i][j].getColor());
 			lastScreenBuffer[i][j].setChar(screenBuffer[i][j].getLetter());
+			lastScreenBuffer[i][j].setOcupant(screenBuffer[i][j].getOcupant());
 		}
 	}
 }
@@ -152,9 +172,9 @@ void rlUtilJM::TextWrapper(const char * text, int color, int background, int pos
 	}
 }
 
-void rlUtilJM::AddPixel(int y, int x, int content, int *** _sprite)
+void rlUtilJM::AddPixel(int y, int x, int content, int **& _sprite)
 {
-	*_sprite[y][x] = content;
+	_sprite[y][x] = content;
 }
 
 int ** rlUtilJM::InitSpriteArray(int y, int x)

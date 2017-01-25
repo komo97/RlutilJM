@@ -4,7 +4,7 @@ Entity::Entity(int _type, int _x, int _y)
 {
 	type = _type;
 	x = _x; 
-	_y = y;
+	y = _y;
 }
 
 void Entity::setSprite(int ** _sprite)
@@ -55,7 +55,7 @@ void Entity::InitSprite(int sizeX, int sizeY)
 
 void Entity::draw()
 {
-	if (type == CHARACTER)
+	if (type == CHARACTER || type == ENEMY)
 	{
 		int i, j;
 		for (i = 0; i < spriteSizeY; i++)

@@ -18,6 +18,7 @@ public:
 	inline int getSpriteSizeHor() { return spriteSizeX; };
 	inline int getSpriteSizeVer() { return spriteSizeY; };
 	inline int getType() { return type; };
+	inline int getLife() { return life; };
 
 	//Setters
 	inline void setX(int _x) { x = _x; };
@@ -26,22 +27,23 @@ public:
 	///Don't fill if it's a background.
 	///</summary>
 	inline void setAttack(int _attack) { attack = _attack; };
+	inline void setLife(int _life) { life = _life; };
 	///<summary>
 	///Don't fill if it's a background.
 	///</summary>
 	inline void setSpeed(int _speed) { speed = _speed; };
-	inline void setSprite(int** _sprite);
-	inline void setColors(int col1, int col2, int col3, int col4);
+	void setSprite(int** _sprite);
+	void setColors(int col1, int col2, int col3, int col4);
 	///<summary>
 	///Don't fill if it's a background.
 	///</summary>
 	inline void setWeaponColor(int _weapon) { weapon = _weapon; };
-	inline void setLetters(char let1, char let2, char let3, char let4);
+	void setLetters(char let1, char let2, char let3, char let4);
 	///<summary>
 	///Don't fill if it's a background.
 	///</summary>
 	inline void setWeaponLetter(char _let) { charWeapon = _let; };
-	inline void setBackgrounds(int _bg1, int _bg2, int _bg3, int _bg4);
+	void setBackgrounds(int _bg1, int _bg2, int _bg3, int _bg4);
 	void InitSprite(int sizeX, int sizeY);
 
 	//Modders
