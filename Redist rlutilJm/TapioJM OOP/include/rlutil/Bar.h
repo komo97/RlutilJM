@@ -12,9 +12,9 @@ public:
 	inline void setY(int _y) { y = _y; };
 	inline void setValue(int val) { currValue = val; };
 	inline void setMax(int val) { maxValue = val; };
-	void setColors(int col1, int col2, int col3);
+	inline void setColors(int col1, int col2, int col3);
 	inline void setConstraint(int cons) { constraint = cons; };
-	void InitSprite(int _width, int _height);
+	inline void InitSprite(int _width, int _height);
 
 	//getters
 	inline int getX() { return x; };

@@ -47,7 +47,6 @@
 #include "SFML\System.hpp"
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
-#include "SFML\Window.hpp"
 #include "Tile.h"
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -88,7 +87,6 @@ namespace rlutilJM {
 #define BAR 0x0003
 #define TEXT 0x0004 
 #define WALL 0x0005
-#define ENEMY 0x0006
 };
 
 using namespace rlutilJM;
@@ -109,20 +107,12 @@ public:
 	///<param name="_y">Window's height.</param>
 	static void WindowSize(int _x, int _y);
 
-	///<summary>Initiates an event for music to reproduce. Only works with .ogg and .flac files. This is a song that will play only if nothing else is playing.
-	///It may stop any other song from playing by using stopCurrentAudio
+	///<summary>Initiates an event for music to reproduce. Only works with .ogg and .flac files.
 	///<remark>Uses SFML</remark></summary>
 	///<param name="_musicPath">The complete path to the music file. From "C:\\"</param>
 	///<param name="_loop">Will the music loop? TRUE or FALSE only</param>
 	///<param name="_vol">The music volume</param>
-	///<param name="_stopCurrentAudio">If the current music should be stopped to start a new one</param>
-	static void PlayMusicBackground(char* _musicPath, BOOL _loop, float _vol, BOOL _stopCurrentAudio);
-
-	///<summary>Initiates an event for music to reproduce. Only works with .ogg and .flac files.
-	///<remark>Uses SFML</remark></summary>
-	///<param name="_musicPath">The complete path to the music file. From "C:\\"</param>
-	///<param name="_vol">The music volume</param>
-	static void PlaySoundEffect(char* _musicPath, float _vol);
+	static void PlayMusic(char* _musicPath, BOOL _loop, float _vol);
 
 	///<summary>
 	///Makes the CMD have square pixels. It's already called in WindowSize;
@@ -173,7 +163,7 @@ public:
 	///</summary>
 	///<param name="y">The sprite's space in Y.</param><param name="x">The sprite's space in X.</param>
 	///<param name="content">The pixel's content.</param><param name="_sprite">The array to work with by ref.</param>
-	static void AddPixel(int y, int x, int content, int**& _sprite);
+	static void AddPixel(int y, int x, int content, int*** _sprite);
 
 	///<summary>
 	///Returns an initialized bidimentional Int array. Simple method for saving some lines.
@@ -183,18 +173,12 @@ public:
 	inline static int getScreenWidth() { return SCREEN_SIZE_WIDTH; };
 	inline static int getScreenHeight() { return SCREEN_SIZE_HEIGHT; };
 
-	///<summary>
-	///Detects collisions using a mask. Returns true only if an Enemy has overlapped with a Character.
-	///</summary>
-	inline static bool getEventCollisionStatus() { return collision; };
 private:
 	static int SCREEN_SIZE_WIDTH;
 	static int SCREEN_SIZE_HEIGHT;
 	static Tile** screenBuffer;
 	static Tile** lastScreenBuffer;
 	static sf::Music music;
-	static bool collision;
-	inline static void setEventCollisionStatus(bool _status) { collision = _status; };
 };
 
 #endif // !_RLUTILSJM_H_
