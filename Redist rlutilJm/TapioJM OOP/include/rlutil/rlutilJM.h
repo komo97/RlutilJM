@@ -119,6 +119,30 @@ public:
 	static void PlaySoundEffect(char* _musicPath, float _vol);
 
 	///<summary>
+	///Changes the volume of the background music.
+	///</summary>
+	static void ChangeBackgroundVolume(float _vol);
+
+	///<summary>
+	///Returns the background's music volume.
+	///</summary>
+	static float GetBackgroundVolume();
+
+	///<summary>
+	///Pauses the background music.
+	///</summary>
+	static void PauseBackgroundMusic();
+
+	///<summary>
+	///Unpauses the background music.
+	///</summary>
+	static void UnPauseBackgroundMusic();
+
+	static bool BackgroundMusicIsPlaying();
+
+	static bool BackgroundMusicIsPaused();
+
+	///<summary>
 	///To print the sprites to the screen the engine creates a fake screen macrobuffer which later is printed onto the console.
 	///Please do not use anywhere as each draw method works around this.
 	///</summary>
@@ -167,9 +191,12 @@ private:
 	static Tile** screenBuffer;
 	static Tile** lastScreenBuffer;
 	static sf::Music music;
+	static sf::SoundBuffer soundBuffer;
+	static sf::Sound sound;
 	static std::thread drawThread;
 	static std::queue<std::function<void()>> delegator;
 	static CONSOLE_FONT_INFOEX savedFont;
+	static bool queueIsOnUse;
 
 	///<summary>
 	///Sets the collision status for every Entity in screen.

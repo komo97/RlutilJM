@@ -9,6 +9,8 @@ int rlUtilJM::SCREEN_SIZE_HEIGHT;
 Tile** rlUtilJM::screenBuffer;
 Tile** rlUtilJM::lastScreenBuffer;
 sf::Music rlUtilJM::music;
+sf::SoundBuffer rlUtilJM::soundBuffer;
+sf::Sound rlUtilJM::sound;
 CONSOLE_FONT_INFOEX rlUtilJM::savedFont;
 std::queue<std::function<void()>> rlUtilJM::delegator;
 std::thread rlUtilJM::drawThread;
@@ -76,10 +78,47 @@ void rlUtilJM::PlayMusicBackground(char * _musicPath, BOOL _loop, float _vol, BO
 
 void rlUtilJM::PlaySoundEffect(char * _musicPath, float _vol)
 {
-	if (!music.openFromFile(_musicPath))
+	if (!soundBuffer.loadFromFile(_musicPath))
+		return;
+	sound.setBuffer(soundBuffer);
+	sound.setVolume(_vol);
+	sound.play();
+}
+
+void rlUtilJM::ChangeBackgroundVolume(float _vol)
+{
+	if (_vol == music.getVolume())
 		return;
 	music.setVolume(_vol);
+}
+
+float rlUtilJM::GetBackgroundVolume()
+{
+	return music.getVolume();
+}
+
+void rlUtilJM::PauseBackgroundMusic()
+{
+	if (music.getStatus() == music.Stopped)
+		return;
+	music.pause();
+}
+
+void rlUtilJM::UnPauseBackgroundMusic()
+{
+	if (music.getStatus() == music.Playing)
+		return;
 	music.play();
+}
+
+bool rlUtilJM::BackgroundMusicIsPlaying()
+{
+	return music.getStatus() == music.Playing;
+}
+
+bool rlUtilJM::BackgroundMusicIsPaused()
+{
+	return music.getStatus() == music.Paused;
 }
 
 void rlUtilJM::FontSize()
