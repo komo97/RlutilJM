@@ -14,7 +14,8 @@ sf::Sound rlUtilJM::sound;
 CONSOLE_FONT_INFOEX rlUtilJM::savedFont;
 std::queue<std::function<void()>> rlUtilJM::delegator;
 std::thread rlUtilJM::drawThread;
-bool rlUtilJM::queueIsOnUse = false;
+std::mutex rlUtilJM::m;
+Entity *rlUtilJM::emptyEntity;
 PCONSOLE_SCREEN_BUFFER_INFO info = new CONSOLE_SCREEN_BUFFER_INFO;
 
 void rlUtilJM::KeepScreenSize()
@@ -22,16 +23,14 @@ void rlUtilJM::KeepScreenSize()
 
 	HWND wnd = GetConsoleWindow();
 	HANDLE consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-	if (queueIsOnUse == false)
-	{
+	m.lock();
 		GetConsoleScreenBufferInfo(consoleOutput, info);
-
 		if (info->dwSize.X != SCREEN_SIZE_WIDTH || info->dwSize.Y != SCREEN_SIZE_HEIGHT)
 		{
 			std::string mod = "MODE CON COLS=" + std::to_string(SCREEN_SIZE_WIDTH) + " LINES=" + std::to_string(SCREEN_SIZE_HEIGHT);
 			std::system(mod.c_str());
 		}
-	}
+	m.unlock();
 	hidecursor();
 }
 
@@ -157,6 +156,7 @@ void rlUtilJM::ClearBuffer()
 			screenBuffer[i][j].setColor(0);
 			screenBuffer[i][j].setChar('\0');
 			screenBuffer[i][j].setOcupant(EMPTY);
+			screenBuffer[i][j].setEntity(emptyEntity);
 		}
 	}
 }
@@ -176,8 +176,7 @@ void rlUtilJM::PrintBuffer()
 		{
 			if (screenBuffer[i][j].getOcupant() != lastScreenBuffer[i][j].getOcupant() &&
 				screenBuffer[i][j].getOcupant() != EMPTY &&
-				screenBuffer[i][j].getOcupant() != BAR && lastScreenBuffer[i][j].getEntity() != nullptr &&
-				queueIsOnUse == false)
+				screenBuffer[i][j].getOcupant() != BAR && lastScreenBuffer[i][j].getEntity() != emptyEntity)
 			{
 				setEventCollisionStatus(true, lastScreenBuffer[i][j].getEntity(), screenBuffer[i][j].getEntity());
 				setEventCollisionStatus(true, screenBuffer[i][j].getEntity(), lastScreenBuffer[i][j].getEntity());
@@ -190,7 +189,6 @@ void rlUtilJM::PrintBuffer()
 				setColor(screenBuffer[i][j].getColor());
 				setBackgroundColor(screenBuffer[i][j].getBackground());
 				std::cout << screenBuffer[i][j].getLetter();
-				//printf("%c", screenBuffer[i][j].getLetter());
 			}
 			lastScreenBuffer[i][j].setBackground(screenBuffer[i][j].getBackground());
 			lastScreenBuffer[i][j].setColor(screenBuffer[i][j].getColor());
@@ -200,20 +198,11 @@ void rlUtilJM::PrintBuffer()
 	}
 
 	ClearBuffer();
-	//for (int i = 0; i < SCREEN_SIZE_HEIGHT; ++i)
-	//{
-	//	for (int j = 0; j < SCREEN_SIZE_WIDTH; ++j)
-	//	{
-	//		lastScreenBuffer[i][j].setBackground(screenBuffer[i][j].getBackground());
-	//		lastScreenBuffer[i][j].setColor(screenBuffer[i][j].getColor());
-	//		lastScreenBuffer[i][j].setChar(screenBuffer[i][j].getLetter());
-	//		lastScreenBuffer[i][j].setOcupant(screenBuffer[i][j].getOcupant());
-	//	}
-	//}
 }
 
 void rlUtilJM::CreateFakeScreenBuffer()
 {
+	emptyEntity = new Entity();
 	screenBuffer = new Tile*[SCREEN_SIZE_HEIGHT];
 	lastScreenBuffer = new Tile*[SCREEN_SIZE_HEIGHT];
 	for (int i = 0; i < SCREEN_SIZE_HEIGHT; ++i)
@@ -225,6 +214,8 @@ void rlUtilJM::CreateFakeScreenBuffer()
 	{
 		for (int j = 0; j < SCREEN_SIZE_WIDTH; ++j)
 		{
+			screenBuffer[i][j].setEntity(emptyEntity);
+			lastScreenBuffer[i][j].setEntity(emptyEntity);
 			lastScreenBuffer[i][j].setBackground(screenBuffer[i][j].getBackground());
 			lastScreenBuffer[i][j].setColor(screenBuffer[i][j].getColor());
 			lastScreenBuffer[i][j].setChar(screenBuffer[i][j].getLetter());
@@ -259,12 +250,9 @@ int ** rlUtilJM::InitSpriteArray(int y, int x)
 
 void rlUtilJM::AddToDrawThread(std::function<void()> funct)
 {
-	if (queueIsOnUse == false)
-	{
-		queueIsOnUse = true;
+	m.lock();
 		delegator.push(funct);
-		queueIsOnUse = false;
-	}
+	m.unlock();
 
 }
 
@@ -278,15 +266,16 @@ void rlUtilJM::executeDraw()
 
 	while (1)
 	{
-		if (delegator.size() <= 0 || queueIsOnUse == true)
+		if (delegator.size() <= 0)
 		{
 			std::this_thread::sleep_for(std::chrono::milliseconds(16));
 			continue;
 		}
-		queueIsOnUse = true;
-		delegator.front()();
-		delegator.pop();
-		queueIsOnUse = false;
+		m.lock();
+			std::function<void()> f = delegator.front();
+			delegator.pop();
+		m.unlock();
+		f();
 	}
 }
 
