@@ -72,7 +72,7 @@ void Entity::freeSprite()
 {
 	for (int i = 0; i < spriteSizeY; i++)
 	{
-		delete(sprite[i]);
+		delete[](sprite[i]);
 	}
 	delete(sprite);
 }
