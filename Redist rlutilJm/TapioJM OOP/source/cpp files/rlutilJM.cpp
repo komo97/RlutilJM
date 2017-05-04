@@ -17,12 +17,14 @@ std::thread rlUtilJM::drawThread;
 std::mutex rlUtilJM::m;
 Entity *rlUtilJM::emptyEntity;
 PCONSOLE_SCREEN_BUFFER_INFO info = new CONSOLE_SCREEN_BUFFER_INFO;
+bool rlUtilJM::buffIsEmpty = false;
 
 void rlUtilJM::KeepScreenSize()
 {
 
 	HWND wnd = GetConsoleWindow();
 	HANDLE consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+	std::ios_base::sync_with_stdio(false);
 	m.lock();
 		GetConsoleScreenBufferInfo(consoleOutput, info);
 		if (info->dwSize.X != SCREEN_SIZE_WIDTH || info->dwSize.Y != SCREEN_SIZE_HEIGHT)
@@ -34,12 +36,12 @@ void rlUtilJM::KeepScreenSize()
 	hidecursor();
 }
 
-void rlUtilJM::WindowSize(int _x, int _y)
+void rlUtilJM::WindowSize(const int& _x, const int& _y)
 {
 	cls();
 	SCREEN_SIZE_HEIGHT = _y;
 	SCREEN_SIZE_WIDTH = _x;
-
+	std::ios_base::sync_with_stdio(false);
 	std::string mod = "MODE CON COLS=" + std::to_string(SCREEN_SIZE_WIDTH) + " LINES=" + std::to_string(SCREEN_SIZE_HEIGHT);
 	std::system(mod.c_str());
 	saveDefaultColor();
@@ -55,10 +57,11 @@ void rlUtilJM::WindowSize(int _x, int _y)
 		MoveWindow(wnd, 0, 0, _x - 1, _y - 1, FALSE);
 	}
 	KeepScreenSize();
+
 	hidecursor();
 }
 
-void rlUtilJM::PlayMusicBackground(char * _musicPath, BOOL _loop, float _vol, BOOL _stopCurrentAudio)
+void rlUtilJM::PlayMusicBackground(const char * _musicPath, const BOOL& _loop, const float& _vol, const BOOL& _stopCurrentAudio)
 {
 	if (!music.openFromFile(_musicPath))
 		return;
@@ -75,7 +78,7 @@ void rlUtilJM::PlayMusicBackground(char * _musicPath, BOOL _loop, float _vol, BO
 	}
 }
 
-void rlUtilJM::PlaySoundEffect(char * _musicPath, float _vol)
+void rlUtilJM::PlaySoundEffect(const char * _musicPath, const float& _vol)
 {
 	if (!soundBuffer.loadFromFile(_musicPath))
 		return;
@@ -84,7 +87,7 @@ void rlUtilJM::PlaySoundEffect(char * _musicPath, float _vol)
 	sound.play();
 }
 
-void rlUtilJM::ChangeBackgroundVolume(float _vol)
+void rlUtilJM::ChangeBackgroundVolume(const float& _vol)
 {
 	if (_vol == music.getVolume())
 		return;
@@ -135,8 +138,10 @@ void rlUtilJM::FontSize()
 	SetCurrentConsoleFontEx(consoleOutput, FALSE, &currFont);
 }
 
-void rlUtilJM::AddToBuffer(int _colorVal, int _backVal, char _letVal, int posx, int posy, int ocup, Entity* entity)
+void rlUtilJM::AddToBuffer(const int& _colorVal, const int& _backVal, const char& _letVal,
+	const int& posx, const int& posy, const int& ocup, Entity* const& entity)
 {
+	buffIsEmpty = false;
 	screenBuffer[posy][posx].setBackground(_backVal);
 	screenBuffer[posy][posx].setColor(_colorVal);
 	screenBuffer[posy][posx].setChar(_letVal);
@@ -159,6 +164,7 @@ void rlUtilJM::ClearBuffer()
 			screenBuffer[i][j].setEntity(emptyEntity);
 		}
 	}
+	buffIsEmpty = true;
 }
 
 void rlUtilJM::RestoreFont()
@@ -170,6 +176,8 @@ void rlUtilJM::RestoreFont()
 
 void rlUtilJM::PrintBuffer()
 {
+	if (buffIsEmpty)
+		return;
 	for (int i = 0; i < SCREEN_SIZE_HEIGHT; ++i)
 	{
 		for (int j = 0; j < SCREEN_SIZE_WIDTH; ++j)
@@ -223,7 +231,8 @@ void rlUtilJM::CreateFakeScreenBuffer()
 	}
 }
 
-void rlUtilJM::TextWrapper(const char * text, int color, int background, int posx, int posy)
+void rlUtilJM::TextWrapper(const char * text, const int& color,
+	const int& background, const int& posx, const int& posy)
 {
 	std::string a(text);
 	for (int i = 0; i < a.size(); ++i)
@@ -232,12 +241,12 @@ void rlUtilJM::TextWrapper(const char * text, int color, int background, int pos
 	}
 }
 
-void rlUtilJM::AddPixel(int y, int x, int content, int **& _sprite)
+void rlUtilJM::AddPixel(const int& y, const int& x, const int& content, int **& _sprite)
 {
 	_sprite[y][x] = content;
 }
 
-int ** rlUtilJM::InitSpriteArray(int y, int x)
+int ** rlUtilJM::InitSpriteArray(const int& y, const int& x)
 {
 	int** arr;
 	arr = new int*[y];
@@ -248,7 +257,7 @@ int ** rlUtilJM::InitSpriteArray(int y, int x)
 	return arr;
 }
 
-void rlUtilJM::AddToDrawThread(std::function<void()> funct)
+void rlUtilJM::AddToDrawThread(const std::function<void()>& funct)
 {
 	m.lock();
 		delegator.push(funct);
@@ -256,7 +265,7 @@ void rlUtilJM::AddToDrawThread(std::function<void()> funct)
 
 }
 
-void rlUtilJM::setEventCollisionStatus(bool _status, Entity * collisioned, Entity * other)
+void rlUtilJM::setEventCollisionStatus(const bool& _status, Entity * collisioned, Entity * const& other)
 {
 	collisioned->SetCollisionState(_status, other); 
 }
@@ -268,10 +277,10 @@ void rlUtilJM::executeDraw()
 	{
 		if (delegator.size() <= 0)
 		{
-			std::this_thread::sleep_for(std::chrono::milliseconds(11));
+			std::this_thread::sleep_for(std::chrono::milliseconds(8));
 			continue;
 		}
-		m.lock();
+		m.try_lock();
 			std::function<void()> f = delegator.front();
 			delegator.pop();
 		m.unlock();
@@ -279,7 +288,7 @@ void rlUtilJM::executeDraw()
 	}
 }
 
-void rlUtilJM::startDrawThread(std::function<void()> funct)
+void rlUtilJM::startDrawThread(const std::function<void()>& funct)
 {
 	drawThread = std::thread(funct);
 	drawThread.detach();

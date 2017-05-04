@@ -28,7 +28,7 @@ public:
 	///<summary>
 	///Run this function from main. After it runs no code outside from it will ever run.
 	///</summary>
-	void App(int windowWidthInPixels, int windowHeightInPixels);
+	void App(const int& windowWidthInPixels, const int& windowHeightInPixels);
 
 	static void OnClose();
 private:

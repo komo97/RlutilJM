@@ -28,10 +28,10 @@ void rlUtilJMApp::OnClose()
 void rlUtilJMApp::EndOfFrame()
 {
 	rlUtilJM::AddToDrawThread(rlUtilJM::PrintBuffer);
-	msleep(16);
+	msleep(11);
 }
 
-void rlUtilJMApp::App(int windowWidthInPixels, int windowHeightInPixels)
+void rlUtilJMApp::App(const int& windowWidthInPixels, const int& windowHeightInPixels)
 {
 	rlUtilJM::WindowSize(windowHeightInPixels, windowHeightInPixels);
 
