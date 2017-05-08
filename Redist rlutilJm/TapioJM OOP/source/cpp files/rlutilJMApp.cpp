@@ -15,7 +15,6 @@ void rlUtilJMApp::Start()
 
 void rlUtilJMApp::Update()
 {
-	//rlUtilJM::AddToDrawThread(rlUtilJM::ClearBuffer);
 	rlUtilJM::KeepScreenSize();
 	Draw();
 }
@@ -23,18 +22,19 @@ void rlUtilJMApp::Update()
 void rlUtilJMApp::OnClose()
 {
 	rlUtilJM::RestoreFont();
+	rlUtilJM::Cleanup();
 }
 
 void rlUtilJMApp::EndOfFrame()
 {
 	rlUtilJM::AddToDrawThread(rlUtilJM::PrintBuffer);
-	msleep(11);
+	std::this_thread::sleep_for(std::chrono::milliseconds(11));
 }
 
-void rlUtilJMApp::App(const int& windowWidthInPixels, const int& windowHeightInPixels)
+void rlUtilJMApp::App(const int& windowWidthInPixels, const int& windowHeightInPixels, const char* name)
 {
-	rlUtilJM::WindowSize(windowHeightInPixels, windowHeightInPixels);
-
+	rlUtilJM::WindowSize(windowWidthInPixels, windowHeightInPixels);
+	rlUtilJM::ChangeWindowTitle(name);
 	this->Start();
 	
 	while (1)
