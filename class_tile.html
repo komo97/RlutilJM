@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>rlutilJM: Tile Class Reference</title>
+<title>rlUtilsJM: Tile Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,10 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">rlutilJM
-   &#160;<span id="projectnumber">1.01.</span>
+   <div id="projectname">rlUtilsJM
+   &#160;<span id="projectnumber">1.00</span>
    </div>
-   <div id="projectbrief">Small tool for making 2D games in windows CMD.</div>
+   <div id="projectbrief">Framework for developping Windows CMD games.</div>
   </td>
  </tr>
  </tbody>
@@ -83,11 +83,14 @@ $(document).ready(function(){initNavTree('class_tile.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_tile-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_tile_8h_source.html">Tile.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -99,19 +102,45 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afc218c65412cc6c2065d12655a50bb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099498fe5e6da58cb180402ab0a80e33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a099498fe5e6da58cb180402ab0a80e33">getOcupant</a> ()</td></tr>
 <tr class="separator:a099498fe5e6da58cb180402ab0a80e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a044a5d8cf07dfec9ee359cf88f117301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a044a5d8cf07dfec9ee359cf88f117301">setColor</a> (int _color)</td></tr>
-<tr class="separator:a044a5d8cf07dfec9ee359cf88f117301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39846a20e36d7f2aea84b890402f60f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a39846a20e36d7f2aea84b890402f60f6">setBackground</a> (int _back)</td></tr>
-<tr class="separator:a39846a20e36d7f2aea84b890402f60f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa268d7729fb51215ddaa09f7ebcec733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#aa268d7729fb51215ddaa09f7ebcec733">setChar</a> (char _letter)</td></tr>
-<tr class="separator:aa268d7729fb51215ddaa09f7ebcec733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a912539b469ce6a4f6e0b6387972e1ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a912539b469ce6a4f6e0b6387972e1ce6">setOcupant</a> (int _ocupant)</td></tr>
-<tr class="separator:a912539b469ce6a4f6e0b6387972e1ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cedc53ffae2370ae1c7f7df2c8c9933"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a2cedc53ffae2370ae1c7f7df2c8c9933">getEntity</a> ()</td></tr>
+<tr class="separator:a2cedc53ffae2370ae1c7f7df2c8c9933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86242124a0890595d0f523060de4ea76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a86242124a0890595d0f523060de4ea76">setColor</a> (const int &amp;_color)</td></tr>
+<tr class="separator:a86242124a0890595d0f523060de4ea76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423abf0e144241f75ea6d66b958b7a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a423abf0e144241f75ea6d66b958b7a01">setBackground</a> (const int &amp;_back)</td></tr>
+<tr class="separator:a423abf0e144241f75ea6d66b958b7a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc534065ecec958c479461e352785827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#afc534065ecec958c479461e352785827">setChar</a> (const char &amp;_letter)</td></tr>
+<tr class="separator:afc534065ecec958c479461e352785827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa431348bc166683bbb6e66ec0fb3763b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#aa431348bc166683bbb6e66ec0fb3763b">setOcupant</a> (const int &amp;_ocupant)</td></tr>
+<tr class="separator:aa431348bc166683bbb6e66ec0fb3763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84f312f41aac834deafeac923d61d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#af84f312f41aac834deafeac923d61d44">setEntity</a> (<a class="el" href="class_entity.html">Entity</a> *const &amp;_entity)</td></tr>
+<tr class="separator:af84f312f41aac834deafeac923d61d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d696247c6c9c8d9db76ed446366edbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a6d696247c6c9c8d9db76ed446366edbe">setStatic</a> (bool _static)</td></tr>
+<tr class="separator:a6d696247c6c9c8d9db76ed446366edbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fb6595abd60793fafa1154849de12e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a04fb6595abd60793fafa1154849de12e">setDrawn</a> (bool _drawn)</td></tr>
+<tr class="separator:a04fb6595abd60793fafa1154849de12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f907344cbf2e058545597949effad02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a0f907344cbf2e058545597949effad02">getIsStatic</a> ()</td></tr>
+<tr class="separator:a0f907344cbf2e058545597949effad02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f49ff69c5a2f97b8432b2febb0eec9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a6f49ff69c5a2f97b8432b2febb0eec9a">getIsDrawn</a> ()</td></tr>
+<tr class="separator:a6f49ff69c5a2f97b8432b2febb0eec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8efdefc17cf532e796789270fd30d99c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a8efdefc17cf532e796789270fd30d99c">colorVal</a></td></tr>
+<tr class="separator:a8efdefc17cf532e796789270fd30d99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5e0d18592fe9d3be27496bb666dde3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a0e5e0d18592fe9d3be27496bb666dde3">backVal</a></td></tr>
+<tr class="separator:a0e5e0d18592fe9d3be27496bb666dde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57723b26da8821d5931d74e4d4a02379"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a57723b26da8821d5931d74e4d4a02379">letVal</a></td></tr>
+<tr class="separator:a57723b26da8821d5931d74e4d4a02379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9370b4e54fcb4185e47571133ad51cc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a9370b4e54fcb4185e47571133ad51cc0">ocupant</a></td></tr>
+<tr class="separator:a9370b4e54fcb4185e47571133ad51cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd60fad81006fc55f4395b699e20736"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a0dd60fad81006fc55f4395b699e20736">entity</a> = NULL</td></tr>
+<tr class="separator:a0dd60fad81006fc55f4395b699e20736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e4b6050959c3be7f3db33d5013c645"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#ab6e4b6050959c3be7f3db33d5013c645">isStatic</a></td></tr>
+<tr class="separator:ab6e4b6050959c3be7f3db33d5013c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b60deed66d5fa1e5c9ddbbf3c82096"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a64b60deed66d5fa1e5c9ddbbf3c82096">isDrawn</a></td></tr>
+<tr class="separator:a64b60deed66d5fa1e5c9ddbbf3c82096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00005">5</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a19a39bb8af4bac1330b13248397f5676"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19a39bb8af4bac1330b13248397f5676">&#9670;&nbsp;</a></span>getBackground()</h2>
 
@@ -134,8 +163,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00008">8</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
 
 </div>
 </div>
@@ -162,7 +189,80 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00007">7</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
+</div>
+</div>
+<a id="a2cedc53ffae2370ae1c7f7df2c8c9933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cedc53ffae2370ae1c7f7df2c8c9933">&#9670;&nbsp;</a></span>getEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* Tile::getEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f49ff69c5a2f97b8432b2febb0eec9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f49ff69c5a2f97b8432b2febb0eec9a">&#9670;&nbsp;</a></span>getIsDrawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tile::getIsDrawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f907344cbf2e058545597949effad02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f907344cbf2e058545597949effad02">&#9670;&nbsp;</a></span>getIsStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tile::getIsStatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -189,8 +289,6 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00009">9</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
-
 </div>
 </div>
 <a id="a099498fe5e6da58cb180402ab0a80e33"></a>
@@ -216,12 +314,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00010">10</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
-
 </div>
 </div>
-<a id="a39846a20e36d7f2aea84b890402f60f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39846a20e36d7f2aea84b890402f60f6">&#9670;&nbsp;</a></span>setBackground()</h2>
+<a id="a423abf0e144241f75ea6d66b958b7a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423abf0e144241f75ea6d66b958b7a01">&#9670;&nbsp;</a></span>setBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +328,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Tile::setBackground </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>_back</em></td><td>)</td>
           <td></td>
         </tr>
@@ -244,12 +340,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00012">12</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
-
 </div>
 </div>
-<a id="aa268d7729fb51215ddaa09f7ebcec733"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa268d7729fb51215ddaa09f7ebcec733">&#9670;&nbsp;</a></span>setChar()</h2>
+<a id="afc534065ecec958c479461e352785827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc534065ecec958c479461e352785827">&#9670;&nbsp;</a></span>setChar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +354,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Tile::setChar </td>
           <td>(</td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char &amp;&#160;</td>
           <td class="paramname"><em>_letter</em></td><td>)</td>
           <td></td>
         </tr>
@@ -272,12 +366,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00013">13</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
-
 </div>
 </div>
-<a id="a044a5d8cf07dfec9ee359cf88f117301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a044a5d8cf07dfec9ee359cf88f117301">&#9670;&nbsp;</a></span>setColor()</h2>
+<a id="a86242124a0890595d0f523060de4ea76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86242124a0890595d0f523060de4ea76">&#9670;&nbsp;</a></span>setColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +380,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Tile::setColor </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>_color</em></td><td>)</td>
           <td></td>
         </tr>
@@ -300,12 +392,62 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00011">11</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
+</div>
+</div>
+<a id="a04fb6595abd60793fafa1154849de12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fb6595abd60793fafa1154849de12e">&#9670;&nbsp;</a></span>setDrawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tile::setDrawn </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_drawn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<a id="a912539b469ce6a4f6e0b6387972e1ce6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912539b469ce6a4f6e0b6387972e1ce6">&#9670;&nbsp;</a></span>setOcupant()</h2>
+<a id="af84f312f41aac834deafeac923d61d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84f312f41aac834deafeac923d61d44">&#9670;&nbsp;</a></span>setEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tile::setEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>_entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa431348bc166683bbb6e66ec0fb3763b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa431348bc166683bbb6e66ec0fb3763b">&#9670;&nbsp;</a></span>setOcupant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +458,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Tile::setOcupant </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>_ocupant</em></td><td>)</td>
           <td></td>
         </tr>
@@ -328,10 +470,192 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tile_8h_source.html#l00014">14</a> of file <a class="el" href="_tile_8h_source.html">Tile.h</a>.</p>
+</div>
+</div>
+<a id="a6d696247c6c9c8d9db76ed446366edbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d696247c6c9c8d9db76ed446366edbe">&#9670;&nbsp;</a></span>setStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tile::setStatic </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_static</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0e5e0d18592fe9d3be27496bb666dde3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5e0d18592fe9d3be27496bb666dde3">&#9670;&nbsp;</a></span>backVal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tile::backVal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8efdefc17cf532e796789270fd30d99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efdefc17cf532e796789270fd30d99c">&#9670;&nbsp;</a></span>colorVal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tile::colorVal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dd60fad81006fc55f4395b699e20736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd60fad81006fc55f4395b699e20736">&#9670;&nbsp;</a></span>entity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity.html">Entity</a>* Tile::entity = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64b60deed66d5fa1e5c9ddbbf3c82096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b60deed66d5fa1e5c9ddbbf3c82096">&#9670;&nbsp;</a></span>isDrawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tile::isDrawn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6e4b6050959c3be7f3db33d5013c645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e4b6050959c3be7f3db33d5013c645">&#9670;&nbsp;</a></span>isStatic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tile::isStatic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57723b26da8821d5931d74e4d4a02379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57723b26da8821d5931d74e4d4a02379">&#9670;&nbsp;</a></span>letVal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Tile::letVal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9370b4e54fcb4185e47571133ad51cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9370b4e54fcb4185e47571133ad51cc0">&#9670;&nbsp;</a></span>ocupant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tile::ocupant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="_tile_8h_source.html">Tile.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

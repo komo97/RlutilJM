@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['addattack',['addAttack',['../class_entity.html#a675e55b911a19416d5e192625ba666a9',1,'Entity']]],
-  ['addlife',['addLife',['../class_entity.html#a1e68b95e90e849f9ef1b57956877e6bc',1,'Entity']]],
-  ['addpixel',['AddPixel',['../classrl_util_j_m.html#adbd35167e16653bd83553f8995b79bd1',1,'rlUtilJM']]],
-  ['addspeed',['addSpeed',['../class_entity.html#a2f07ff78b69b42fc5ff4428c615218e0',1,'Entity']]],
-  ['addtobuffer',['AddToBuffer',['../classrl_util_j_m.html#a3e7d0dec3befe5d88dd8631eeb1a0d96',1,'rlUtilJM']]],
-  ['addvalue',['addValue',['../class_bar.html#a28c7ab479c5fb7694127fab89d54cc83',1,'Bar']]],
-  ['addx',['addX',['../class_entity.html#a585a53db57bb2ba617067c8fb6168f01',1,'Entity']]],
-  ['addy',['addY',['../class_entity.html#a3ec27da826c3e4022ab74878b0a54c25',1,'Entity']]]
+  ['addattack',['addAttack',['../class_entity.html#a4c5215758a9cda8418823d4d878315c6',1,'Entity']]],
+  ['addentitytomanager',['AddEntityToManager',['../classrl_util_j_m.html#ae7cd27af31fab44d6bfb7f97139394e1',1,'rlUtilJM']]],
+  ['addlife',['addLife',['../class_entity.html#ad7ede2df84a14540f70acc4688b2d239',1,'Entity']]],
+  ['addpixel',['AddPixel',['../classrl_util_j_m.html#a0ef1e4ced4409dd7cae55c98a4bc27cd',1,'rlUtilJM']]],
+  ['addspeed',['addSpeed',['../class_entity.html#ae719bdd116440d6791f609c8d4037462',1,'Entity']]],
+  ['addtobuffer',['AddToBuffer',['../classrl_util_j_m.html#a0c75d3b77f530a1efcbd2e1a3be0957e',1,'rlUtilJM']]],
+  ['addtodrawthread',['AddToDrawThread',['../classrl_util_j_m.html#adb7f531e1a2608a1d733be327a5bb528',1,'rlUtilJM']]],
+  ['addvalue',['addValue',['../class_bar.html#a24a08c0c5d9c69b8c66abd3a93d0f709',1,'Bar']]],
+  ['addx',['addX',['../class_entity.html#a59d99a7f50548a97b5dbd6fa4c86cf74',1,'Entity']]],
+  ['addy',['addY',['../class_entity.html#a38b1024628b023e95781ca94917acfef',1,'Entity']]],
+  ['anykey',['anykey',['../rlutil_8h.html#a4da304a3cd6040ec36c486412527cefe',1,'rlutil.h']]],
+  ['app',['App',['../classrl_util_j_m_app.html#a322eb5957d1fea6fe19423085ed9fb33',1,'rlUtilJMApp']]]
 ];

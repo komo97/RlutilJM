@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['speed',['speed',['../structstats.html#a4549b83ebc0e821f38db21f06da0b2ef',1,'stats']]],
-  ['sprite',['sprite',['../structstats.html#aae19f07e35a03d684906a658250338a9',1,'stats']]],
-  ['spritesizex',['spriteSizeX',['../structstats.html#a9e36cd15d3a184c684a1dc0ab797cf26',1,'stats::spriteSizeX()'],['../structbar.html#a5e2ee8cdb9a55c565c0edcfdc559bed5',1,'bar::spriteSizeX()']]],
-  ['spritesizey',['spriteSizeY',['../structstats.html#aa9e61580892c6f684c6904ddb74caa8d',1,'stats::spriteSizeY()'],['../structbar.html#ad60128769c132e1915d22b8dc58b9288',1,'bar::spriteSizeY()']]]
+  ['m',['m',['../classrl_util_j_m.html#a1a8bbd1ef16d9c99251e5a43cc5000fc',1,'rlUtilJM']]],
+  ['mainbuffactive',['mainBuffActive',['../classrl_util_j_m.html#a179ab751158e2eb284cc711404e89604',1,'rlUtilJM']]],
+  ['mainbuffer',['mainBuffer',['../classrl_util_j_m.html#a3682e4076d4df42fa3bc753bfce1c96b',1,'rlUtilJM']]],
+  ['maxvalue',['maxValue',['../class_bar.html#a17c67d8e82b025ff7a5fb5dc1ec374ac',1,'Bar']]],
+  ['music',['music',['../classrl_util_j_m.html#af674b0f94fe8beb836cb2d416109e52c',1,'rlUtilJM']]]
 ];

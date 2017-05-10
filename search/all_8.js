@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keepscreensize',['KeepScreenSize',['../classrl_util_j_m.html#adacc6ef6950e39a8cbf648467fe13a5d',1,'rlUtilJM']]]
+  ['hidecursor',['hidecursor',['../rlutil_8h.html#abdd163103c31d14e57703e8a4f98a48c',1,'rlutil.h']]]
 ];

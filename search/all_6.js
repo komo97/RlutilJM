@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['getattack',['getAttack',['../class_entity.html#aae036430d4de6fcb232a6eb998347f73',1,'Entity']]],
-  ['getbackground',['getBackground',['../class_tile.html#a19a39bb8af4bac1330b13248397f5676',1,'Tile']]],
-  ['getcolor',['getColor',['../class_tile.html#a1f78cc2af18988a498efb5a835ba3099',1,'Tile']]],
-  ['geteventcollisionstatus',['getEventCollisionStatus',['../classrl_util_j_m.html#ab2dc0647b9405c3d15f76107338a304f',1,'rlUtilJM']]],
-  ['getletter',['getLetter',['../class_tile.html#afc218c65412cc6c2065d12655a50bb91',1,'Tile']]],
-  ['getmax',['getMax',['../class_bar.html#a47d34aaf6d550f55420276ebf2f8a19c',1,'Bar']]],
-  ['getocupant',['getOcupant',['../class_tile.html#a099498fe5e6da58cb180402ab0a80e33',1,'Tile']]],
-  ['getpercent',['getPercent',['../class_bar.html#a3d82834008b72a493a35e2f0cfa20fb6',1,'Bar']]],
-  ['getscreenheight',['getScreenHeight',['../classrl_util_j_m.html#a6e984d89ab3e4c086561e3747f7ea4ac',1,'rlUtilJM']]],
-  ['getscreenwidth',['getScreenWidth',['../classrl_util_j_m.html#a72e4969b98d728c9b27b7c515101874f',1,'rlUtilJM']]],
-  ['getsizehor',['getSizeHor',['../class_bar.html#aeaf702aaa26ed222e1b5014c46ca3648',1,'Bar']]],
-  ['getsizever',['getSizeVer',['../class_bar.html#ad5d433eb126016025fff4756c7df1402',1,'Bar']]],
-  ['getspeed',['getSpeed',['../class_entity.html#a65f27075a95287e8c0f8f101498b3e84',1,'Entity']]],
-  ['getsprite',['getSprite',['../class_entity.html#a48d3a8a239791a7a7e43c5152e7669bc',1,'Entity']]],
-  ['getspritesizehor',['getSpriteSizeHor',['../class_entity.html#a80c402398c390373c32f22f26c327b43',1,'Entity']]],
-  ['getspritesizever',['getSpriteSizeVer',['../class_entity.html#ad948c5a1bf88e0d3f8a226e8e0366399',1,'Entity']]],
-  ['gettype',['getType',['../class_entity.html#ac54cf97ab5e7fadca07c54b1cf15a74a',1,'Entity']]],
-  ['getvalue',['getValue',['../class_bar.html#a60e69829339826a504d19d019c0daf15',1,'Bar']]],
-  ['getx',['getX',['../class_bar.html#a77082682857b8211de1b219ac62ef747',1,'Bar::getX()'],['../class_entity.html#a8bad399d8b9c6bf23ecbb8f0b4fe6a64',1,'Entity::getX()']]],
-  ['gety',['getY',['../class_bar.html#af2b622c5aca08ec137927662a77bfef5',1,'Bar::getY()'],['../class_entity.html#a4f2a264033195f9004a494069c5865f0',1,'Entity::getY()']]]
+  ['fontsize',['FontSize',['../classrl_util_j_m.html#a22d403c1bad6a4b6eb74bba4f200496d',1,'rlUtilJM']]],
+  ['forceclearscreen',['ForceClearScreen',['../classrl_util_j_m.html#a930b84b615e254f3cb2e83d70c346e94',1,'rlUtilJM']]],
+  ['freesprite',['freeSprite',['../class_entity.html#a6adec3bcec396133896aaecdb13f87e0',1,'Entity']]]
 ];

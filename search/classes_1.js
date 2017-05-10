@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity',['Entity',['../class_entity.html',1,'']]]
+  ['colorpalette',['ColorPalette',['../class_color_palette.html',1,'']]]
 ];
